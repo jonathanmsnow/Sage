@@ -1,12 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { AppRegistry, StyleSheet, View  } from 'react-native';
+import { PaperProvider, ActivityIndicator, MD2Colors } from 'react-native-paper';
+import { name as appName } from './app.json';
+
+const SAGE_GREEN = '#9AC791';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <PaperProvider>
+        <View style={styles.container}>
+          <ActivityIndicator animating={true} color={SAGE_GREEN} size={'large'} />
+        </View>
+      </PaperProvider>
   );
 }
 
@@ -18,3 +23,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+AppRegistry.registerComponent(appName, () => App);
+
+
