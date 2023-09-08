@@ -8,8 +8,9 @@ const RecipesScreen = () => {
   const [recipes, setRecipes] = useState([])
 
   useEffect(() => {
-    setRecipes(BackendService.retrieveRecipes());
-  })
+    const recipes = BackendService.retrieveRecipes();
+    setRecipes(recipes);
+  }, [])
 
   return (
     <View
