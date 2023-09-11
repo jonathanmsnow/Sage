@@ -17,6 +17,11 @@ export const BackendService = {
                         name: "Ingredient 1",
                         quantity: 2,
                         units: "tablespoons"
+                    },
+                    {
+                        name: "Ingredient 2",
+                        quantity: 3,
+                        units: "tablespoons"
                     }
                 ]
             },
